@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300');
+#main-content {
+    font-family: 'Montserrat', sans-serif;
+    background-image: url("images/TheFlinstonesBackground.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 70%;
+    color: white;
+}
+.navbar {
+    background-color: #004376;
+    color: white;
+    font-size: 10px;
+    height: 50px;
+    padding-left: 0;
+}
+#flag-list-item {
+    padding-top: 0;
+}
+.nav-text-items {
+    width: 33%;
+}
+#last-nav-item {
+    width: 55%;
+}
+#flag-list-text-item span {
+    text-transform: uppercase;
+}
+.nav-item {
+    padding-top: 3px;
+}
+.nav-item i {
+    color: white;
+}
+.nav-item span {
+    white-space: pre-line;
+    text-transform: capitalize;
+}
+#nav-bar-login-btn {
+    position: absolute;
+    left: 95%;
+    right: 0;
+    top: 0;
+    height: 50px;
+    background-image: linear-gradient(#FA9424, #DB7B24);
+    padding: 15px 0 13px 1%;
+    color: black;
+    font-weight: bold;
+    font-size: 13px;
+    width: 5%;
+}
+.navbar i {
+    color: white;
+}
+#nav-bar-login-btn:hover {
+    background-image: linear-gradient(#DB7B24, #FA9424);
+    cursor: pointer;
+}
+.row {
+    margin: 0;
+}
+form {
+    margin-top: 20px;
+    border-radius: 15px;
+    background: white;
+    height: auto;
+    padding: 15px;
+}
+form h1 {
+    /*font-size: 16px;*/
+    text-align: left;
+    color: #E59E4E;
+    margin-bottom: 1.5rem;
+}
+form p {
+    margin-bottom: 1.5rem;
+    font-size: 12px;
+    text-align: left;
+    color: black;
+}
+form input[type=text], form input[type=email], form input[type=password] {
+    background-color: #e9ecef;
+    padding-left: 0px;
+}
+#join-now-btn {
+    background-color: #69B31F;
+    color: white;
+}
+#join-now-btn::after {
+    padding-left: 5px;
+    font-family: "Font Awesome 5 Free"; font-weight: 400; content: "\f35a";
+    /*content: none;*/
+}
+.logo {
+    background-image: url("images/A_Flintstones_logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    /*margin-top: 20%;*/
+    height: 150px;
+}
+#ligal-line {
+    margin-bottom: 5px;
+    font-size: 10px;
+    color: white;
+}
+#exclusive-offer {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+    padding: 10px 15px 20px;
+    font-size: 20px;
+}
+#exclusive-offer span {
+    margin-left: 17px;
+}
+#get-your-discount-line-one, #get-your-discount-line-two, #get-your-discount-line-three {
+    text-shadow: 0 2px 5px #000; /* horizontal-offset vertical-offset 'blur' colour */
+    -moz-text-shadow: 0 2px 5px #000;
+    -webkit-text-shadow: 0 2px 5px #000;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+#get-your-discount-line-two {
+    font-size: 46px;
+    line-height: 1;
+}
+#get-your-discount-line-three {
+    font-size: 37px;
+}
+#smaller-font {
+    font-size: 23px;
+    text-align: center;
+}
+#flinstones-car {
+    background-image: url("images/TheFlinstonesCar.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 467px;
+}
+#terms-and-conditions {
+    position: relative;
+}
+#terms-and-conditions div {
+    position: absolute;
+    bottom: 5px;
+    left: 30%;
+}
+#secondary-article {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 350px;
+}
+footer {
+    height: 190px;
+    background-color: #E2E2E2;
+    padding: 0 20%;
+    text-align: center;
+}
+.game-icons img {
+    height: 200px;
+}
+#brand-icons {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+}
+#copyright-text {
+    padding: 15px 0;
+}

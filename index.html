@@ -1,0 +1,198 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>The Flinstones</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand p-4" href="#">
+                <img src="images/casino-logo.png" width="auto" height="30" alt="">
+            </a>
+            <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+                <li id="flag-list-item" class="nav-item">
+                    <img src="images/United_Kingdom-512.png" width="auto" height="35" alt="uk-flag">
+                </li>
+                <li id="flag-list-text-item" class="nav-item nav-text-items">
+                    <span>Gambling
+                        Commission</span>
+                </li>
+                <li class="nav-item">
+                    <div class="nav-link">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                </li>
+                <li class="nav-item nav-text-items">
+                    <span>Secure
+                        Payments</span>
+                </li>
+                <li class="nav-item">
+                    <div class="nav-link">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                </li>
+                <li id="last-nav-item" class="nav-item nav-text-items">
+                    <span>Data
+                        Protected</span>
+                </li>
+                <li id="nav-bar-login-btn" class="nav-item nav-text-items">
+                    <i class="fas fa-sign-in-alt"></i>
+                    <span>Login</span>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <article id="main-content" class="row">
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-6"></div>
+                        <div class="col-6">
+                            <div id="exclusive-offer">Exclusive offer from: <span>/ logo</span></div>
+                            <div id="get-your-discount-line-one">Get Your</div>
+                            <div id="get-your-discount-line-two"class="row">
+                                <div class="col-5">100% </div>
+                                <div id="smaller-font" class="col-2">
+                                    <div class="row">up</div>
+                                    <div class="row">to</div>
+                                </div>
+                                <div class="col-5"> £400</div>
+                            </div>
+                            <div id="get-your-discount-line-three">+200 Free Spins</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="terms-and-conditions" class="col-6">
+                            <div>+ Terms and Conditions apply</div>
+                        </div>
+                        <div id="flinstones-car" class="col-6"></div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="row">
+                    <div class="col-4"></div>
+                    <div class="col-5">
+                    <form class="text-center border border-light">
+
+                        <h1>Sign up</h1>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+
+                        <!-- E-mail -->
+                        <div class="input-group">
+                            <div class="input-group-prepend mb-4 border-right-0">
+                                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                            </div>
+                            <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4 border-left-0" placeholder="E-mail">
+                        </div>
+
+                        <!-- First name -->
+                        <div class="input-group">
+                            <div class="input-group-prepend mb-4 border-right-0">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input type="text" id="defaultRegisterFormUserName" class="form-control mb-4 border-left-0" placeholder="User name">
+                        </div>
+
+                        <!-- Password -->
+                        <div class="input-group">
+                            <div class="input-group-prepend mb-4 border-right-0">
+                                <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                            </div>
+                            <input type="password" id="defaultRegisterFormPassword" class="form-control mb-4 border-left-0" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+
+                        </div>
+                        <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4 d-none">
+                            At least 8 characters and 1 digit
+                        </small>
+                        <!-- Password -->
+                        <div class="input-group">
+                            <div class="input-group-prepend mb-4 border-right-0">
+                                <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                            </div>
+                            <input type="password" id="defaultRegisterFormConfirmPassword" class="form-control mb-4 border-left-0" placeholder="Confirm Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+                            <small id="defaultRegisterFormConfirmPasswordHelpBlock" class="form-text text-muted d-none">
+                                Must be the same as the password field
+                            </small>
+                        </div>
+
+                        <!-- Join now button -->
+                        <button id="join-now-btn" class="btn btn-lg btn-block" type="submit">Join Now</button>
+                    </form>
+                    </div>
+                    <div class="col-3"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2"></div>
+                        <div class="col-8 logo"></div>
+                        <div class="col-2"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4"></div>
+                        <div class="col-6">
+                            <div id="ligal-line">Ligal Line Ligal Line Ligal Line Ligal Line Ligal Line Ligal Line Ligal Line Ligal Line</div>
+                        </div>
+                        <div class="col-2"></div>
+                    </div>
+                </div>
+            </article>
+            <article id="secondary-article" class="row">
+                <div class="game-icons">
+                    <img src="images/AVGC01.jpg" width="150" height="auto" alt="">
+                </div>
+                <div class="space-between-covers"></div>
+                <div class="game-icons">
+                    <img src="images/Dishonored.jpg" width="150" height="auto" alt="">
+                </div>
+                <div class="space-between-covers"></div>
+                <div class="game-icons">
+                    <img src="images/far_cry_3_-_cover.jpg" width="150" height="auto" alt="">
+                </div>
+                <div class="space-between-covers"></div>
+                <div class="game-icons">
+                    <img src="images/spider-man.jpg" width="150" height="auto" alt="">
+                </div>
+                <div class="space-between-covers"></div>
+                <div class="game-icons">
+                    <img src="images/transformers.jpg" width="150" height="auto" alt="">
+                </div>
+                <div class="space-between-covers"></div>
+                <div class="game-icons">
+                    <img src="images/watch-dogs-ubisoft-cover-art.jpg" width="150" height="auto" alt="">
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <div class="row">
+            <div id="brand-icons" class="col-12">
+                <img src="images/gambleaware-logo.png" width="auto" height="30" alt="gamble">
+                <img src="images/Thawte_logo.svg.png" width="auto" height="30" alt="gamble">
+                <img src="images/GRTJewellersLLC_L.png" width="auto" height="30" alt="gamble">
+                <img src="images/gbga_icon@2x.png" width="auto" height="30" alt="gamble">
+                <img src="images/house_stark_logo_by_anonymousadversary-d99iwya.png" width="auto" height="30" alt="gamble">
+                <img src="images/ibas.png" width="auto" height="30" alt="gamble">
+                <img src="images/Gambling-Commission-logo-transparent.png" width="auto" height="30" alt="gamble">
+            </div>
+        </div>
+        <div class="row">
+            <div id="copyright-text" class="col-12">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
