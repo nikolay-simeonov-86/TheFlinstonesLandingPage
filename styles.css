@@ -60,15 +60,23 @@
 .row {
     margin: 0;
 }
+#form-column {
+    min-height: 76%;
+}
 form {
+    position: relative;
+    z-index: 1;
+    top: -650px;
     margin-top: 20px;
     border-radius: 15px;
     background: white;
     height: auto;
     padding: 15px;
+    transition-property: all;
+    transition-duration: 1.5s;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
 }
 form h1 {
-    /*font-size: 16px;*/
     text-align: left;
     color: #E59E4E;
     margin-bottom: 1.5rem;
@@ -83,9 +91,46 @@ form input[type=text], form input[type=email], form input[type=password] {
     background-color: #e9ecef;
     padding-left: 0px;
 }
-#join-now-btn {
+form input[type=checkbox] {
+    zoom: 1.3;
+    transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    -o-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+}
+#third-form input[type=text], #third-form input[type=number], #third-form input[type=tel] {
+    background-color: #e9ecef;
+    padding-left: 12px;
+}
+#bonus-code-checkbox-form {
+    color: black;
+}
+.form-notification {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    bottom: 3px;
+    color: red;
+}
+.green-btn {
     background-color: #69B31F;
     color: white;
+    white-space: normal;
+}
+#skip-btn:hover, #play-now:hover, #promotions:hover {
+    color: white;
+}
+.form-transform-animation {
+    -ms-transform: translate(0,650px); /* IE 9 */
+    -webkit-transform: translate(0,650px); /* Safari */
+    transform: translate(0,650px); /* Standard syntax */
 }
 #join-now-btn::after {
     padding-left: 5px;
@@ -93,17 +138,20 @@ form input[type=text], form input[type=email], form input[type=password] {
     /*content: none;*/
 }
 .logo {
-    background-image: url("images/A_Flintstones_logo.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    /*margin-top: 20%;*/
-    height: 150px;
+    position: absolute;
+    left: 26%;
+    top: 68%;
+}
+.logo img {
+    height: 180px;
 }
 #ligal-line {
-    margin-bottom: 5px;
-    font-size: 10px;
+    position: relative;
+    bottom: 0px;
+    left: 14%;
+    font-size: 9px;
     color: white;
+    z-index: 0;
 }
 #exclusive-offer {
     text-align: center;
@@ -146,18 +194,23 @@ form input[type=text], form input[type=email], form input[type=password] {
 }
 #terms-and-conditions div {
     position: absolute;
-    bottom: 5px;
+    bottom: 15px;
     left: 30%;
 }
-#secondary-article {
+#icons-container {
     display: flex;
     justify-content: space-between;
-    margin: 20px 350px;
+    width: 75%;
+    margin: 20px auto;
 }
 footer {
     height: 190px;
     background-color: #E2E2E2;
     padding: 0 20%;
+    text-align: center;
+}
+.game-icons {
+    position: relative;
     text-align: center;
 }
 .game-icons img {
@@ -166,8 +219,229 @@ footer {
 #brand-icons {
     padding: 15px 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    max-width: 80%;
+    margin: auto;
 }
 #copyright-text {
     padding: 15px 0;
+}
+.hover-over-cover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 200px;
+    width: 150px;
+    z-index: 2;
+    background-color: rgba(255,255,255,0.7);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+.game-cover-heading {
+    padding: 20px 5px;
+    min-height: 100px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.play-game {
+    margin: auto;
+    padding: 5px 10px;
+    border: none;
+    color: white;
+    background-image: linear-gradient(#FA9424, #DB7B24);
+    cursor: pointer;
+}
+.play-game:hover {
+    background-image: linear-gradient(#DB7B24, #FA9424);
+    cursor: pointer;
+}
+#darker-backgound-container {
+    background-color: rgba(0,0,0,0.5);
+}
+.moved-header-menu {
+    list-style: none;
+}
+.moved-header-menu li {
+    display: inline;
+}
+/*Media queries*/
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+    /* For tablets: */
+    .navbar-brand {
+        padding-left: 10px;
+    }
+    .nav-item {
+        margin-right: 10px;
+    }
+    .nav-link i {
+        font-size: 15px;
+    }
+    #flag-list-item {
+        margin-right: 0;
+    }
+    #last-nav-item {
+        width: 29%;
+    }
+    .nav-text-items {
+        width: auto;
+    }
+    #nav-bar-login-btn {
+        left: 93%;
+        padding: 7px;
+        width: 7%;
+    }
+    #nav-bar-login-btn i {
+        font-size: 36px;
+    }
+    #nav-bar-login-btn span, #first-row-left-col, #exclusive-offer, #empty-left-form-col, #empty-right-form-col, .logo img {
+        display: none;
+    }
+    #first-row-right-col {
+        margin-top: 50px;
+    }
+    #get-your-discount-line-one, #get-your-discount-line-three, #smaller-font {
+        font-size: 25px;
+    }
+    #get-your-discount-line-two {
+        font-size: 52px;
+    }
+    #flinstones-car {
+        height: 500px;
+    }
+    #terms-and-conditions {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        top: 60px;
+    }
+    #terms-and-conditions div {
+        left: 12%;
+        bottom: 30px;
+        text-decoration: underline;
+        font-size: 12px;
+    }
+    #ligal-line {
+        left: -16%;
+        top: 190px;
+        background-color: rgba(0,0,0,0.4);
+    }
+    form {
+        top: 0;
+        left: 370px;
+    }
+    form p {
+        font-size: 11px;
+    }
+    .form-transform-animation {
+        -ms-transform: translate(-370px,0); /* IE 9 */
+        -webkit-transform: translate(-370px,0); /* Safari */
+        transform: translate(-370px,0); /* Standard syntax */
+    }
+    #join-now-btn:after {
+        content: none;
+    }
+    #icons-container {
+        width: 90%;
+    }
+    footer {
+        padding: 0 5%;
+    }
+    #copyright-text {
+        padding: 0;
+    }
+    #brand-icons {
+        max-width: 100%;
+    }
+}
+@media only screen and (max-width: 767px) {
+    /* For mobile phones: */
+    .navbar-brand {
+        margin: auto;
+    }
+    .navbar-nav, #nav-bar-login-btn span, #first-row-left-col, #flinstones-div, #logo-row, #empty-left-form-col, #empty-right-form-col, #secondary-article {
+        display: none;
+    }
+    .navbar {
+        padding: 0;
+    }
+    #nav-bar-login-btn {
+        list-style-type: none;
+        left: 88%;
+        width: 12%;
+        padding: 12px 7px;
+    }
+    #nav-bar-login-btn i {
+        font-size: 28px;
+    }
+    #main-content {
+        background-size: 750% 100%;
+         height: auto;
+    }
+    form {
+        top: 0;
+        right: 355px;
+    }
+    .form-transform-animation {
+        -ms-transform: translate(355px,0); /* IE 9 */
+        -webkit-transform: translate(355px,0); /* Safari */
+        transform: translate(355px,0); /* Standard syntax */
+    }
+    #join-now-btn:after {
+        content: none;
+    }
+    .game-icons {
+        flex: 0 50%;
+        margin: 10px 0;
+    }
+    #icons-container {
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 0;
+    }
+    #ligal-line {
+        position: unset;
+        margin-top: 10px;
+        margin-left: 20px;
+        font-size: 11px;
+    }
+    #terms-and-conditions div {
+        position: unset;
+        font-size: 11px;
+        text-decoration: underline;
+        margin: 0 5px;
+    }
+    #header-menu-items {
+        font-size: 11px;
+        display: flex;
+        margin: 5px 17px;
+        white-space: pre-line;
+    }
+    #header-menu-items i {
+        padding-top: 8px;
+        margin-right: 16px;
+    }
+    footer {
+        height: auto;
+        padding: 0 10%;
+    }
+    #brand-icons {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .brand-icon {
+        margin: 5px 0;
+    }
+    #copyright-text {
+        padding: 0 0 6px 0;
+    }
+    #get-your-discount-line-two {
+        font-size: 50px;
+    }
+    #smaller-font {
+        font-size: 24px;
+    }
+    #get-your-discount-line-three {
+        font-size: 31px;
+    }
 }

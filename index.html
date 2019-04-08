@@ -10,6 +10,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
+    <script src="javascript.js"></script>
     <title>The Flinstones</title>
 </head>
 <body>
@@ -20,11 +21,11 @@
             </a>
             <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
                 <li id="flag-list-item" class="nav-item">
-                    <img src="images/United_Kingdom-512.png" width="auto" height="35" alt="uk-flag">
+                    <img id="uk-flag" src="images/United_Kingdom-512.png" width="auto" height="35" alt="uk-flag">
                 </li>
                 <li id="flag-list-text-item" class="nav-item nav-text-items">
-                    <span>Gambling
-                        Commission</span>
+                    <span id="gambling-commission">GAMBLING
+                        COMMISSION</span>
                 </li>
                 <li class="nav-item">
                     <div class="nav-link">
@@ -32,7 +33,7 @@
                     </div>
                 </li>
                 <li class="nav-item nav-text-items">
-                    <span>Secure
+                    <span id="secure-payments">Secure
                         Payments</span>
                 </li>
                 <li class="nav-item">
@@ -41,7 +42,7 @@
                     </div>
                 </li>
                 <li id="last-nav-item" class="nav-item nav-text-items">
-                    <span>Data
+                    <span id="data-protection">Data
                         Protected</span>
                 </li>
                 <li id="nav-bar-login-btn" class="nav-item nav-text-items">
@@ -54,13 +55,13 @@
     <main>
         <section>
             <article id="main-content" class="row">
-                <div class="col-6">
+                <div id="left-col" class="col-6">
                     <div class="row">
-                        <div class="col-6"></div>
-                        <div class="col-6">
+                        <div id="first-row-left-col" class="col-6"></div>
+                        <div id="first-row-right-col" class="col-6">
                             <div id="exclusive-offer">Exclusive offer from: <span>/ logo</span></div>
                             <div id="get-your-discount-line-one">Get Your</div>
-                            <div id="get-your-discount-line-two"class="row">
+                            <div id="get-your-discount-line-two" class="row">
                                 <div class="col-5">100% </div>
                                 <div id="smaller-font" class="col-2">
                                     <div class="row">up</div>
@@ -71,104 +72,236 @@
                             <div id="get-your-discount-line-three">+200 Free Spins</div>
                         </div>
                     </div>
-                    <div class="row">
+                    <div id="flinstones-div" class="row">
                         <div id="terms-and-conditions" class="col-6">
                             <div>+ Terms and Conditions apply</div>
                         </div>
                         <div id="flinstones-car" class="col-6"></div>
                     </div>
                 </div>
-                <div class="col-6">
+                <div id="right-col" class="col-6">
                     <div class="row">
-                    <div class="col-4"></div>
-                    <div class="col-5">
-                    <form class="text-center border border-light">
+                        <div id="empty-left-form-col" class="col-4"></div>
+                        <div id="form-column" class="col-5">
+                            <form class="text-center border border-light">
+                                <div id="first-form">
+                                    <h1>Sign up</h1>
 
-                        <h1>Sign up</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+                                    <!-- E-mail -->
+                                    <div id="email-form" class="position-relative">
+                                        <small class="form-notification d-none" >Notification</small>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend mb-4 border-right-0">
+                                                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                            </div>
+                                            <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4 border-left-0" placeholder="E-mail">
+                                        </div>
+                                    </div>
 
-                        <!-- E-mail -->
-                        <div class="input-group">
-                            <div class="input-group-prepend mb-4 border-right-0">
-                                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                            </div>
-                            <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4 border-left-0" placeholder="E-mail">
+                                    <!-- User name -->
+                                    <div id="username-form" class="position-relative">
+                                        <small class="form-notification d-none" >Notification</small>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend mb-4 border-right-0">
+                                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                            </div>
+                                            <input type="text" id="defaultRegisterFormUserName" class="form-control mb-4 border-left-0" placeholder="User name">
+                                        </div>
+                                    </div>
+
+                                    <!-- Password -->
+                                    <div id="password-form" class="position-relative">
+                                        <small class="form-notification d-none" >At least 8 characters and 1 digit</small>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend mb-4 border-right-0">
+                                                <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                                            </div>
+                                            <input type="password" id="defaultRegisterFormPassword" class="form-control mb-4 border-left-0" placeholder="Password">
+                                        </div>
+                                    </div>
+
+                                    <!-- Confirm Password -->
+                                    <div id="confirm-password-form" class="position-relative">
+                                        <small class="form-notification d-none" >Does not match password</small>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend mb-4 border-right-0">
+                                                <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                                            </div>
+                                            <input type="password" id="defaultRegisterFormConfirmPassword" class="form-control mb-4 border-left-0" placeholder="Confirm Password">
+                                        </div>
+                                    </div>
+
+                                    <!-- Terms Of Use checkbox -->
+                                    <div id="terms-of-use-checkbox-form" class="position-relative">
+                                        <small class="form-notification d-none" >Does not match password</small>
+                                        <div class="input-group">
+                                            <label for="defaultRegisterFormTermsOfUseCheckbox" class="text-dark">By checking this box, I agree to <u>Terms & Conditions</u> of the site.</label>
+                                            <input type="checkbox" id="defaultRegisterFormTermsOfUseCheckbox" class="ml-auto mr-auto mb-4">
+                                        </div>
+                                    </div>
+
+                                    <!-- Join now button -->
+                                    <button id="join-now-btn" class="btn btn-lg btn-block green-btn">Join Now</button>
+                                </div>
+                                <div id="second-form" class="d-none">
+                                    <p class="text-center">You’re ready to play!</p>
+                                    <p class="text-center">In order to play with real money, you will need to provide more information. You can do so now, if you wish, or skip and do it at a later time.</p>
+                                    <button id="continue-registration-btn" class="btn btn-lg btn-block green-btn">Continue Registration</button>
+                                    <a id="skip-btn" class="btn btn-lg btn-block green-btn" href="http://www.casino.com/">Skip</a>
+                                </div>
+                                <div id="third-form" class="d-none">
+                                    <p class="text-center">Additional information</p>
+
+                                    <!-- Address One -->
+                                    <div id="address-one-form" class="position-relative">
+                                        <small class="form-notification d-none"></small>
+                                        <div class="input-group">
+                                            <input type="text" id="defaultRegisterFormAddressOne" class="form-control mb-4" placeholder="Address One">
+                                        </div>
+                                    </div>
+
+                                    <!-- Address Two -->
+                                    <div id="address-two-form" class="position-relative">
+                                        <small class="form-notification d-none"></small>
+                                        <div class="input-group">
+                                            <input type="text" id="defaultRegisterFormAddressTwo" class="form-control mb-4" placeholder="Address Two">
+                                        </div>
+                                    </div>
+
+                                    <!-- City -->
+                                    <div id="city-form" class="position-relative">
+                                        <small class="form-notification d-none"></small>
+                                        <div class="input-group">
+                                            <input type="text" id="defaultRegisterFormCity" class="form-control mb-4" placeholder="City">
+                                        </div>
+                                    </div>
+
+                                    <!-- Country -->
+                                    <div id="country-form" class="position-relative">
+                                        <small class="form-notification d-none"></small>
+                                        <div class="input-group">
+                                            <input type="text" id="defaultRegisterFormCountry" class="form-control mb-4" placeholder="Country">
+                                        </div>
+                                    </div>
+
+                                    <!-- Postal Code -->
+                                    <div id="postal-code-form" class="position-relative">
+                                        <small class="form-notification d-none"></small>
+                                        <div class="input-group">
+                                            <input type="number" id="defaultRegisterFormPostalCode" class="form-control mb-4" placeholder="Postal Code">
+                                        </div>
+                                    </div>
+
+                                    <!-- Phone Number -->
+                                    <div id="phone-number-form" class="position-relative">
+                                        <small class="form-notification d-none"></small>
+                                        <div class="input-group">
+                                            <input type="tel" id="defaultRegisterFormPhoneNumber" class="form-control mb-4" placeholder="Phone Number">
+                                        </div>
+                                    </div>
+
+                                    <!-- Bonus Code -->
+                                    <div id="bonus-code-form" class="position-relative d-none">
+                                        <small class="form-notification d-none"></small>
+                                        <div class="input-group">
+                                            <input type="number" id="defaultRegisterFormBonusCode" class="form-control mb-4" placeholder="Bonus Code">
+                                        </div>
+                                    </div>
+
+                                    <!-- Bonus Code checkbox -->
+                                    <div id="bonus-code-checkbox-form">
+                                        <label for="defaultRegisterFormBonusCodeCheckbox">Do you have a bonus code? </label>
+                                        <input type="checkbox" id="defaultRegisterFormBonusCodeCheckbox" class="ml-1 mb-4">
+                                    </div>
+
+                                    <button id="continue-registration-last-btn" class="btn btn-lg btn-block green-btn">Continue Registration</button>
+                                </div>
+                                <div id="fourth-form" class="d-none">
+                                    <p class="text-center">Thank you!</p>
+                                    <p class="text-center">You can now play with real money. Have fun, and good luck!</p>
+                                    <a id="play-now" class="btn btn-lg btn-block green-btn" href="http://www.casino.com/casino-games/">Play Now</a>
+                                    <a id="promotions" class="btn btn-lg btn-block green-btn" href="http://www.casino.com/promotions/">Promotions</a>
+                                </div>
+                            </form>
                         </div>
-
-                        <!-- First name -->
-                        <div class="input-group">
-                            <div class="input-group-prepend mb-4 border-right-0">
-                                <span class="input-group-text"><i class="fas fa-user"></i></span>
-                            </div>
-                            <input type="text" id="defaultRegisterFormUserName" class="form-control mb-4 border-left-0" placeholder="User name">
-                        </div>
-
-                        <!-- Password -->
-                        <div class="input-group">
-                            <div class="input-group-prepend mb-4 border-right-0">
-                                <span class="input-group-text"><i class="fas fa-lock"></i></span>
-                            </div>
-                            <input type="password" id="defaultRegisterFormPassword" class="form-control mb-4 border-left-0" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
-
-                        </div>
-                        <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4 d-none">
-                            At least 8 characters and 1 digit
-                        </small>
-                        <!-- Password -->
-                        <div class="input-group">
-                            <div class="input-group-prepend mb-4 border-right-0">
-                                <span class="input-group-text"><i class="fas fa-lock"></i></span>
-                            </div>
-                            <input type="password" id="defaultRegisterFormConfirmPassword" class="form-control mb-4 border-left-0" placeholder="Confirm Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
-                            <small id="defaultRegisterFormConfirmPasswordHelpBlock" class="form-text text-muted d-none">
-                                Must be the same as the password field
-                            </small>
-                        </div>
-
-                        <!-- Join now button -->
-                        <button id="join-now-btn" class="btn btn-lg btn-block" type="submit">Join Now</button>
-                    </form>
+                        <div id="empty-right-form-col" class="col-3"></div>
                     </div>
-                    <div class="col-3"></div>
-                    </div>
-                    <div class="row">
+                    <div id="logo-row" class="row">
                         <div class="col-2"></div>
-                        <div class="col-8 logo"></div>
-                        <div class="col-2"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-4"></div>
-                        <div class="col-6">
+                        <div class="col-8 logo">
+                            <img src="images/A_Flintstones_logo.png" alt="flinstones-logo">
                             <div id="ligal-line">Ligal Line Ligal Line Ligal Line Ligal Line Ligal Line Ligal Line Ligal Line Ligal Line</div>
                         </div>
                         <div class="col-2"></div>
                     </div>
+                    <div id="darker-backgound-container">
+                        <div id="header-menu-items"></div>
+                    </div>
                 </div>
             </article>
             <article id="secondary-article" class="row">
-                <div class="game-icons">
-                    <img src="images/AVGC01.jpg" width="150" height="auto" alt="">
-                </div>
-                <div class="space-between-covers"></div>
-                <div class="game-icons">
-                    <img src="images/Dishonored.jpg" width="150" height="auto" alt="">
-                </div>
-                <div class="space-between-covers"></div>
-                <div class="game-icons">
-                    <img src="images/far_cry_3_-_cover.jpg" width="150" height="auto" alt="">
-                </div>
-                <div class="space-between-covers"></div>
-                <div class="game-icons">
-                    <img src="images/spider-man.jpg" width="150" height="auto" alt="">
-                </div>
-                <div class="space-between-covers"></div>
-                <div class="game-icons">
-                    <img src="images/transformers.jpg" width="150" height="auto" alt="">
-                </div>
-                <div class="space-between-covers"></div>
-                <div class="game-icons">
-                    <img src="images/watch-dogs-ubisoft-cover-art.jpg" width="150" height="auto" alt="">
+                <div id="icons-container">
+                    <div class="game-icons">
+                        <img src="images/AVGC01.jpg" width="150" height="auto" alt="">
+                        <div class="hover-over-cover-image d-none">
+                            <div class="game-cover-heading">
+                                Assassin's Creed
+                            </div>
+                            <button class="play-game">Play for real</button>
+                        </div>
+                    </div>
+                    <div class="space-between-covers"></div>
+                    <div class="game-icons">
+                        <img src="images/Dishonored.jpg" width="150" height="auto" alt="">
+                        <div class="hover-over-cover-image d-none">
+                            <div class="game-cover-heading">
+                                Dishonored
+                            </div>
+                            <button class="play-game">Play for real</button>
+                        </div>
+                    </div>
+                    <div class="space-between-covers"></div>
+                    <div class="game-icons">
+                        <img src="images/far_cry_3_-_cover.jpg" width="150" height="auto" alt="">
+                        <div class="hover-over-cover-image d-none">
+                            <div class="game-cover-heading">
+                                Far Cry
+                            </div>
+                            <button class="play-game">Play for real</button>
+                        </div>
+                    </div>
+                    <div class="space-between-covers"></div>
+                    <div class="game-icons">
+                        <img src="images/spider-man.jpg" width="150" height="auto" alt="">
+                        <div class="hover-over-cover-image d-none">
+                            <div class="game-cover-heading">
+                                Spider Man
+                            </div>
+                            <button class="play-game">Play for real</button>
+                        </div>
+                    </div>
+                    <div class="space-between-covers"></div>
+                    <div class="game-icons">
+                        <img src="images/transformers.jpg" width="150" height="auto" alt="">
+                        <div class="hover-over-cover-image d-none">
+                            <div class="game-cover-heading">
+                                Transformers
+                            </div>
+                            <button class="play-game">Play for real</button>
+                        </div>
+                    </div>
+                    <div class="space-between-covers"></div>
+                    <div class="game-icons">
+                        <img src="images/watch-dogs-ubisoft-cover-art.jpg" width="150" height="auto" alt="">
+                        <div class="hover-over-cover-image d-none">
+                            <div class="game-cover-heading">
+                                Watch Dogs
+                            </div>
+                            <button class="play-game">Play for real</button>
+                        </div>
+                    </div>
                 </div>
             </article>
         </section>
@@ -176,13 +309,13 @@
     <footer>
         <div class="row">
             <div id="brand-icons" class="col-12">
-                <img src="images/gambleaware-logo.png" width="auto" height="30" alt="gamble">
-                <img src="images/Thawte_logo.svg.png" width="auto" height="30" alt="gamble">
-                <img src="images/GRTJewellersLLC_L.png" width="auto" height="30" alt="gamble">
-                <img src="images/gbga_icon@2x.png" width="auto" height="30" alt="gamble">
-                <img src="images/house_stark_logo_by_anonymousadversary-d99iwya.png" width="auto" height="30" alt="gamble">
-                <img src="images/ibas.png" width="auto" height="30" alt="gamble">
-                <img src="images/Gambling-Commission-logo-transparent.png" width="auto" height="30" alt="gamble">
+                <img class="brand-icon" src="images/gambleaware-logo.png" width="auto" height="30" alt="gamble">
+                <img class="brand-icon" src="images/Thawte_logo.svg.png" width="auto" height="30" alt="gamble">
+                <img class="brand-icon" src="images/GRTJewellersLLC_L.png" width="auto" height="30" alt="gamble">
+                <img class="brand-icon" src="images/gbga_icon@2x.png" width="auto" height="30" alt="gamble">
+                <img class="brand-icon" src="images/house_stark_logo_by_anonymousadversary-d99iwya.png" width="auto" height="30" alt="gamble">
+                <img class="brand-icon" src="images/ibas.png" width="auto" height="30" alt="gamble">
+                <img class="brand-icon" src="images/Gambling-Commission-logo-transparent.png" width="auto" height="30" alt="gamble">
             </div>
         </div>
         <div class="row">
@@ -190,7 +323,6 @@
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </div>
         </div>
     </footer>
